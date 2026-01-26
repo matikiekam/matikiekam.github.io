@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Ekam | AI Quality Specialist & Data Annotation Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 5% 5rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 5rem 5%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .about {
+            background: #f9fafb;
+        }
+
+        .about-text {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid #2563eb;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #2563eb;
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: translateX(5px);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .timeline-item h3 {
+            color: #1f2937;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .timeline-meta {
+            color: #6b7280;
+            font-size: 0.95rem;
+            background: #f3f4f6;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .achievements-section {
+            margin-top: 1.5rem;
+        }
+
+        .achievement-label {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .achievements-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievements-list li {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .achievements-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f3f4f6;
+        }
+
+        .metric {
+            background: #f9fafb;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.3rem;
+        }
+
+        .projects {
+            background: #f9fafb;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-description {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .project-achievements {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-achievements li {
+            color: #4b5563;
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .project-achievements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .skills {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid #2563eb;
+        }
+
+        .skill-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(37,99,235,0.2);
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 1rem;
+        }
+
+        .certifications {
+            background: linear-gradient(135deg, #f9fafb, #ffffff);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border: 2px solid #e5e7eb;
+        }
+
+        .certifications h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .education-highlight {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2563eb;
+        }
+
+        .education-highlight strong {
+            color: #2563eb;
+            font-size: 1.1rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-item {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            font-size: 0.95rem;
+            color: #4b5563;
+            transition: transform 0.2s;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+        }
+
+        .tools {
+            background: #f9fafb;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid #2563eb;
+        }
+
+        .tool-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(37,99,235,0.2);
+        }
+
+        .tool-name {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 1rem;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 3%;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Emmanuel Ekam</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Emmanuel Ekam</h1>
+            <p class="subtitle">AI Quality Specialist & Data Annotation Expert</p>
+            <p class="tagline">Electronic & Computer Engineer | 25K+ Annotations | 98-99% Accuracy</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+            <a href="#experience" class="cta-button">View Experience</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Driving AI Excellence Through Precision & Quality</p>
+            <div class="about-text">
+                <p>AI Quality Specialist with comprehensive expertise in high-precision data annotation, LLM evaluation, and model quality assurance. Specializing in NLP, generative AI, and large language model training with a proven track record of delivering 98-99% accuracy across diverse, complex annotation tasks.</p>
+                <p>With a strong foundation in Electronic and Computer Engineering from the University of Nigeria, I combine technical expertise with analytical rigor to drive quality, reliability, and cross-functional effectiveness in fast-paced, high-stakes AI environments. My work directly contributes to production-grade models serving millions of users globally.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <span class="stat-number">25,000+</span>
+                    <span class="stat-label">High-Quality Annotations Delivered</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <span class="stat-number">98-99%</span>
+                    <span class="stat-label">Sustained Accuracy Rate</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">Safety Violation Reduction</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <span class="stat-number">22%</span>
+                    <span class="stat-label">Team Consistency Improvement</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <span class="stat-number">99.7%</span>
+                    <span class="stat-label">On-Time Delivery Rate</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <span class="stat-number">15,000+</span>
+                    <span class="stat-label">Complex NLP Tasks Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">Track Record of Excellence in AI Quality & Data Annotation</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>AI Quality Specialist</h3>
+                            <p class="company">Confidential (NDA-Protected Project)</p>
+                        </div>
+                        <div class="timeline-meta">📅 January 2025 – Present</div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <p class="achievement-label">🎯 Key Responsibilities & Achievements:</p>
+                        <ul class="achievements-list">
+                            <li><strong>Lead Quality Auditor:</strong> Conduct secondary review and comprehensive audits of LLM training and evaluation datasets, processing 10,000+ data points monthly while ensuring alignment with safety, reasoning, and instruction-following standards</li>
+                            <li><strong>Error Analysis Expert:</strong> Perform root-cause analysis on annotation and model failure patterns, implementing corrective actions that improved first-pass quality and reduced rework cycles by 15%</li>
+                            <li><strong>Cross-Functional Collaboration:</strong> Partner directly with ML engineers and data scientists to refine task design, scoring rubrics, and edge-case handling protocols, contributing to models achieving >95% precision benchmarks</li>
+                            <li><strong>Quality Framework Development:</strong> Identified and documented 50+ systematic annotation errors, leading guideline revisions that improved team-wide consistency by 22%</li>
+                            <li><strong>Process Optimization:</strong> Developed and implemented quality assurance framework that reduced critical safety violations by 40% in production datasets</li>
+                            <li><strong>Team Performance Enhancement:</strong> Provide structured quality reports and actionable feedback that strengthened inter-annotator agreement from 87% to 94%</li>
+                            <li><strong>SLA Excellence:</strong> Enforce strict compliance with evolving project guidelines and evaluation protocols under tight deadlines, maintaining 99.7% on-time delivery rate</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">10K+</span>
+                            <span class="metric-label">Monthly Data Points Reviewed</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">15%</span>
+                            <span class="metric-label">Rework Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">50+</span>
+                            <span class="metric-label">Error Patterns Identified</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">87→94%</span>
+                            <span class="metric-label">Inter-annotator Agreement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Data Annotator (Senior)</h3>
+                            <p class="company">Confidential (NDA-Protected Project)</p>
+                        </div>
+                        <div class="timeline-meta">📅 September 2023 – December 2024</div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <p class="achievement-label">🏆 Key Achievements & Recognition:</p>
+                        <ul class="achievements-list">
+                            <li><strong>Elite Performance:</strong> Delivered sustained 98–99% annotation accuracy across 15,000+ complex NLP, reasoning, and instruction-following tasks for large-scale LLM training initiatives</li>
+                            <li><strong>Global Recognition:</strong> Consistently ranked among top performers out of thousands of annotators, selected for advanced review responsibilities and high-stakes projects</li>
+                            <li><strong>Production Impact:</strong> Supported creation of high-integrity datasets used to train multiple production-grade models currently serving millions of users worldwide</li>
+                            <li><strong>Safety Excellence:</strong> Demonstrated exceptional analytical judgment in handling ambiguous, adversarial, and edge-case prompts with 97% accuracy on challenging safety scenarios</li>
+                            <li><strong>Gold Standard Achievement:</strong> Recognized with "Gold Standard Annotator" designation for achieving zero critical errors over 6 consecutive months</li>
+                            <li><strong>Team Leadership:</strong> Mentored new team members on annotation best practices and quality standards, improving team efficiency and reducing ramp-up time</li>
+                            <li><strong>Guideline Development:</strong> Contributed to development of 12 specialized annotation guidelines for emerging AI safety scenarios, now used as standard protocols across teams</li>
+                            <li><strong>Versatile Expertise:</strong> Executed diverse annotation tasks including NLP (sentiment analysis, NER, intent classification), conversational AI, and multimodal projects with consistently high quality</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">15,000+</span>
+                            <span class="metric-label">Annotations Completed</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">97%</span>
+                            <span class="metric-label">Safety Scenario Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">6 Months</span>
+                            <span class="metric-label">Zero Critical Errors</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">12</span>
+                            <span class="metric-label">Guidelines Developed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Project Supervisor (Electrical & Technical Operations)</h3>
+                            <p class="company">A-Z Services</p>
+                        </div>
+                        <div class="timeline-meta">📅 January 2022 – July 2022</div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <p class="achievement-label">⚙️ Leadership & Technical Management:</p>
+                        <ul class="achievements-list">
+                            <li>Supervised electrical installation and maintenance teams across multiple project sites, enforcing rigorous technical standards, safety compliance protocols, and quality control measures</li>
+                            <li>Improved project execution reliability and reduced delays through strategic work planning, materials optimization, and effective on-site coordination</li>
+                            <li>Applied systems thinking and risk management practices in high-stakes situations, ensuring project success and client satisfaction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Front Office Manager</h3>
+                            <p class="company">Jumia Nigeria</p>
+                        </div>
+                        <div class="timeline-meta">📅 January 2017 – October 2017</div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <p class="achievement-label">💼 Operations & Customer Excellence:</p>
+                        <ul class="achievements-list">
+                            <li>Managed comprehensive customer operations, scheduling, and digital records management, significantly improving service turnaround times and accountability metrics</li>
+                            <li>Streamlined administrative workflows and strengthened cross-department communication, enhancing overall operational efficiency</li>
+                            <li>Built foundational leadership capabilities, performance tracking expertise, and stakeholder management skills in fast-paced e-commerce environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">High-Impact AI Annotation & Quality Assurance Initiatives</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🚗</div>
+                        <h3>Dashcam Footage Annotation</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Dashcam footage" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Large-scale computer vision annotation project for autonomous vehicle training, focusing on object detection, lane identification, and traffic scenario classification from real-world dashcam footage.</p>
+                        <ul class="project-achievements">
+                            <li>Annotated 3,500+ hours of dashcam video footage across diverse conditions</li>
+                            <li>Labeled 40+ object classes including vehicles, pedestrians, cyclists, and traffic signs</li>
+                            <li>Achieved 98.7% accuracy in bounding box placement and object classification</li>
+                            <li>Processed footage in varying weather conditions (rain, fog, night driving)</li>
+                            <li>Contributed to autonomous driving dataset used by major automotive AI systems</li>
+                            <li>Maintained consistent quality standards across 50,000+ annotated frames</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔧</div>
+                        <h3>Manhole & Sewer Infrastructure Inspection</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Infrastructure inspection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Specialized computer vision project for municipal infrastructure maintenance, annotating underground inspection imagery for defect detection, structural assessment, and predictive maintenance applications.</p>
+                        <ul class="project-achievements">
+                            <li>Processed 7,800+ underground inspection images with high precision</li>
+                            <li>Classified 18+ defect types (cracks, corrosion, blockages, structural damage)</li>
+                            <li>Performed semantic segmentation for pipe condition assessment</li>
+                            <li>Achieved 97.9% inter-annotator agreement on defect classification</li>
+                            <li>Supported AI model enabling predictive maintenance for city infrastructure</li>
+                            <li>Contributed to reducing manual inspection time by 45%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <h3>LLM Training & RLHF Optimization</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="LLM Training" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Comprehensive work on large language model training datasets, specializing in instruction-following, complex reasoning tasks, RLHF feedback, and safety alignment for production AI systems.</p>
+                        <ul class="project-achievements">
+                            <li>Delivered 15,000+ high-quality annotations for LLM training initiatives</li>
+                            <li>Ranked and evaluated responses for RLHF optimization, improving model performance</li>
+                            <li>Conducted safety and harmfulness evaluation across diverse scenarios</li>
+                            <li>Assessed complex reasoning and multi-turn dialogue capabilities</li>
+                            <li>Contributed to models achieving >95% precision on benchmark tasks</li>
+                            <li>Specialized in edge cases and adversarial prompt handling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">✨</div>
+                        <h3>Generative AI Quality Assessment</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Generative AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Comprehensive evaluation and quality scoring for generative AI outputs including text generation, content safety verification, and prompt-response alignment for production systems.</p>
+                        <ul class="project-achievements">
+                            <li>Evaluated 8,000+ AI-generated responses across multiple models</li>
+                            <li>Scored output quality across 12 comprehensive dimensions</li>
+                            <li>Conducted prompt engineering and refinement for optimal results</li>
+                            <li>Performed content safety and alignment verification</li>
+                            <li>Supported GPT and Claude model fine-tuning initiatives</li>
+                            <li>Identified and documented quality improvement opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📄</div>
+                        <h3>Document Understanding & NLP</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Document AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Advanced text annotation for information extraction, named entity recognition, sentiment analysis, and document classification for enterprise AI applications.</p>
+                        <ul class="project-achievements">
+                            <li>Labeled 12,000+ complex text documents with high precision</li>
+                            <li>Performed named entity recognition (NER) for critical entities</li>
+                            <li>Conducted sentiment and intent classification tasks</li>
+                            <li>Processed multi-language text with cultural sensitivity</li>
+                            <li>Achieved 99.1% field extraction accuracy rate</li>
+                            <li>Established annotation standards for document AI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🧠</div>
+                        <h3>Reasoning & Code Evaluation</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&q=80" alt="Reasoning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Complex reasoning task annotation for AI systems, including mathematical reasoning, logical deduction, code generation evaluation, and multi-step problem solving.</p>
+                        <ul class="project-achievements">
+                            <li>Processed 5,000+ complex reasoning tasks</li>
+                            <li>Evaluated code generation quality and correctness</li>
+                            <li>Assessed mathematical and logical reasoning capabilities</li>
+                            <li>Validated multi-step instruction following</li>
+                            <li>Achieved 98.3% annotation consistency rate</li>
+                            <li>Developed evaluation criteria for reasoning tasks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔒</div>
+                        <h3>AI Safety & Alignment</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&q=80" alt="AI Safety" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Specialized work on AI safety datasets including harmful content detection, bias evaluation, fairness assessment, and ethical AI alignment for responsible deployment.</p>
+                        <ul class="project-achievements">
+                            <li>Reviewed 6,000+ safety scenarios with expert analysis</li>
+                            <li>Classified harmful content with severity ratings</li>
+                            <li>Conducted bias and fairness evaluation across demographics</li>
+                            <li>Tested edge cases and adversarial prompts</li>
+                            <li>Contributed to 40% reduction in safety violations</li>
+                            <li>Developed safety evaluation frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">💬</div>
+                        <h3>Conversational AI Training</h3>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80" alt="Conversational AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Multi-turn dialogue annotation for chatbots and virtual assistants, including context understanding, response quality evaluation, and personality consistency assessment.</p>
+                        <ul class="project-achievements">
+                            <li>Annotated 4,000+ complex dialogue sessions</li>
+                            <li>Evaluated context coherence and continuity</li>
+                            <li>Scored response appropriateness and quality</li>
+                            <li>Assessed personality and tone consistency</li>
+                            <li>Supported customer service AI deployment</li>
+                            <li>Enhanced conversational flow evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Core Skills & Expertise</h2>
+            <p class="section-subtitle">Comprehensive Technical & Quality Assurance Capabilities</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-name">📝 Named Entity Recognition (NER)</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">😊 Sentiment Analysis</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🏷️ Text Classification</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🎯 Intent Recognition</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🤖 LLM Evaluation & Testing</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⭐ RLHF (Reinforcement Learning from Human Feedback)</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📊 Response Ranking & Comparison</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔒 AI Safety & Alignment</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">💡 Prompt Engineering</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🎨 Model Fine-tuning Support</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔍 Root Cause Analysis</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">✅ Dataset Validation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🐛 Error Analysis & Pattern Detection</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⚙️ QA Framework Development</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📋 Audit Reporting</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📈 Statistical Analysis</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🤝 Inter-annotator Agreement</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📖 Guideline Development</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🧠 Complex Reasoning Tasks</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">💻 Code Quality Evaluation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📄 Document AI & Information Extraction</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">💬 Conversational AI Evaluation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🛡️ Content Moderation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⚖️ Bias Detection & Fairness</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🐍 Python Programming</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔄 Data Pipeline Management</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📅 Project Management</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">👥 Cross-functional Collaboration</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📚 Technical Documentation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🎓 Team Mentoring & Training</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⏱️ SLA Management</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔁 Agile Methodology</div>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h3>🎓 Education & Professional Certifications</h3>
+                <div class="education-highlight">
+                    <strong>B.Sc. Electronic and Computer Engineering</strong><br>
+                    University of Nigeria | 2023
+                </div>
+                <div class="cert-grid">
+                    <div class="cert-item">✓ Microsoft Software Development Fundamentals</div>
+                    <div class="cert-item">✓ Microsoft HTML5 Development & Applications</div>
+                    <div class="cert-item">✓ Microsoft Networking Fundamentals</div>
+                    <div class="cert-item">✓ Microsoft Big Data (Hadoop on HDInsight)</div>
+                    <div class="cert-item">✓ Diploma in Customer Service – Alison</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2>Annotation Tools & Platforms</h2>
+            <p class="section-subtitle">Expertise Across Industry-Leading Annotation Technologies</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-name">🏷️ Labelbox</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">📝 Label Studio</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">🔍 Prodigy</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">📄 Doccano</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">☁️ Amazon SageMaker Ground Truth</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">🔄 Dataloop</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">⚖️ Scale AI</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">🎯 Snorkel</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">🔖 Tagtog</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">📊 Weights & Biases</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">💼 Appen</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">🎨 Argilla</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Let's Discuss Your AI Quality & Annotation Needs</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Email</h4>
+                            <a href="mailto:matikiekam@gmail.com" style="color: #2563eb; text-decoration: none; font-weight: 500;">matikiekam@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Location</h4>
+                            <p style="color: #4b5563; margin: 0;">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Open To</h4>
+                            <p style="color: #4b5563; margin: 0;">AI/ML Opportunities, Data Annotation Projects, Quality Assurance Roles, Consulting</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🎯</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Specializations</h4>
+                            <p style="color: #4b5563; margin: 0;">NLP, LLM Evaluation, RLHF, AI Safety, Generative AI</p>
+                        </div>
+                    </div>
+                </div>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = e.target.name.value;
+            alert(`Thank you ${name}! I'll get back to you soon.`);
+            e.target.reset();
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
