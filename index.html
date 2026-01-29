@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmanuel Ekam | AI Quality Specialist & Data Annotation Practitioner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,10 +15,11 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            color: #1f2937;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2c3e50;
             line-height: 1.6;
             overflow-x: hidden;
+            background: #ffffff;
         }
 
         nav {
@@ -24,43 +28,47 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            padding: 1.2rem 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #e9ecef;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2563eb;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #4b5563;
+            color: #7f8c8d;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #2563eb;
+            color: #8b7355;
         }
 
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fef5f5 100%);
+            color: #2c3e50;
             padding: 8rem 5% 5rem;
         }
 
@@ -71,38 +79,46 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 600;
+            color: #2c3e50;
+            letter-spacing: -1px;
         }
 
         .hero .subtitle {
-            font-size: 1.8rem;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            opacity: 0.95;
+            color: #34495e;
+            font-weight: 500;
         }
 
         .hero .tagline {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            opacity: 0.85;
+            color: #7f8c8d;
+            font-weight: 400;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1.2rem 2.5rem;
-            background: white;
-            color: #667eea;
+            padding: 1rem 2rem;
+            background: #8b7355;
+            color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
             transition: all 0.3s;
             margin: 0.5rem;
         }
 
         .cta-button:hover {
+            background: #6f5a42;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
         }
 
         section {
@@ -115,22 +131,25 @@
         }
 
         h2 {
+            font-family: 'Crimson Pro', serif;
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             text-align: center;
-            color: #1f2937;
-            font-weight: 700;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #6b7280;
-            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-size: 1rem;
             margin-bottom: 3rem;
+            font-weight: 400;
         }
 
         .about {
-            background: #f9fafb;
+            background: #ffffff;
         }
 
         .about-text {
@@ -139,10 +158,11 @@
         }
 
         .about-text p {
-            font-size: 1.1rem;
-            color: #4b5563;
+            font-size: 1.05rem;
+            color: #34495e;
             margin-bottom: 1.5rem;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         .stats-grid {
@@ -153,40 +173,45 @@
         }
 
         .stat-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             transition: transform 0.3s;
-            border-top: 4px solid #2563eb;
+            border: 1px solid #e9ecef;
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+            border-color: #8b7355;
+            background: #fef9f7;
         }
 
         .stat-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            opacity: 0.8;
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2563eb;
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #8b7355;
             display: block;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: #6b7280;
-            font-size: 1rem;
-            font-weight: 500;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-weight: 400;
         }
 
         .experience {
-            background: white;
+            background: #fffbfb;
         }
 
         .timeline {
@@ -195,18 +220,18 @@
         }
 
         .timeline-item {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-left: 4px solid #2563eb;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 3px solid #8b7355;
             transition: all 0.3s;
         }
 
         .timeline-item:hover {
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+            transform: translateX(3px);
         }
 
         .timeline-header {
@@ -219,23 +244,25 @@
         }
 
         .timeline-item h3 {
-            color: #1f2937;
+            font-family: 'Crimson Pro', serif;
+            color: #2c3e50;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .company {
-            color: #2563eb;
-            font-weight: 600;
-            font-size: 1.1rem;
+            color: #8b7355;
+            font-weight: 500;
+            font-size: 1.05rem;
         }
 
         .timeline-meta {
-            color: #6b7280;
-            font-size: 0.95rem;
-            background: #f3f4f6;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
         }
 
         .achievements-section {
@@ -244,12 +271,16 @@
 
         .achievement-label {
             font-weight: 600;
-            color: #2563eb;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            background: #fef5f5;
+            border-radius: 4px;
+            width: fit-content;
         }
 
         .achievements-list {
@@ -258,20 +289,22 @@
         }
 
         .achievements-list li {
-            color: #4b5563;
-            margin-bottom: 1rem;
-            padding-left: 2rem;
+            color: #34495e;
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
             position: relative;
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-weight: 400;
         }
 
         .achievements-list li::before {
-            content: '✓';
+            content: '•';
             position: absolute;
             left: 0;
-            color: #2563eb;
+            color: #8b7355;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .impact-metrics {
@@ -280,31 +313,34 @@
             gap: 1rem;
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 2px solid #f3f4f6;
+            border-top: 1px solid #e9ecef;
         }
 
         .metric {
-            background: #f9fafb;
+            background: #fef9f7;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: 6px;
             text-align: center;
+            border: 1px solid #fde8e8;
         }
 
         .metric-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2563eb;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #8b7355;
             display: block;
         }
 
         .metric-label {
             font-size: 0.85rem;
-            color: #6b7280;
+            color: #7f8c8d;
             margin-top: 0.3rem;
+            font-weight: 400;
         }
 
         .projects {
-            background: #f9fafb;
+            background: #ffffff;
         }
 
         .projects-grid {
@@ -314,42 +350,49 @@
         }
 
         .project-card {
-            background: white;
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             transition: all 0.3s;
+            border: 1px solid #e9ecef;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(139, 115, 85, 0.15);
+            border-color: #8b7355;
         }
 
         .project-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .project-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
         }
 
         .project-card h3 {
+            font-family: 'Crimson Pro', serif;
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .project-content {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .project-description {
-            color: #4b5563;
+            color: #34495e;
             margin-bottom: 1.5rem;
-            line-height: 1.7;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-weight: 400;
         }
 
         .project-achievements {
@@ -358,24 +401,25 @@
         }
 
         .project-achievements li {
-            color: #4b5563;
-            font-size: 0.95rem;
+            color: #34495e;
+            font-size: 0.9rem;
             padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.5;
+            font-weight: 400;
         }
 
         .project-achievements li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: #2563eb;
+            color: #8b7355;
             font-weight: bold;
         }
 
         .skills {
-            background: white;
+            background: #f8f9fa;
         }
 
         .skills-grid {
@@ -385,50 +429,53 @@
         }
 
         .skill-card {
-            background: white;
-            padding: 1.2rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #ffffff;
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             transition: all 0.3s;
-            border-left: 4px solid #2563eb;
+            border-left: 3px solid #8b7355;
         }
 
         .skill-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(37,99,235,0.2);
+            transform: translateX(3px);
+            box-shadow: 0 4px 10px rgba(139, 115, 85, 0.15);
         }
 
         .skill-name {
-            font-weight: 600;
-            color: #1f2937;
-            font-size: 1rem;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 0.95rem;
         }
 
         .certifications {
-            background: linear-gradient(135deg, #f9fafb, #ffffff);
-            padding: 2.5rem;
-            border-radius: 12px;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
             margin-top: 3rem;
-            border: 2px solid #e5e7eb;
+            border: 1px solid #e9ecef;
         }
 
         .certifications h3 {
-            color: #1f2937;
+            font-family: 'Crimson Pro', serif;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .education-highlight {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 6px;
             margin-bottom: 1.5rem;
-            border-left: 4px solid #2563eb;
+            border-left: 3px solid #8b7355;
         }
 
         .education-highlight strong {
-            color: #2563eb;
-            font-size: 1.1rem;
+            color: #2c3e50;
+            font-size: 1.05rem;
+            font-weight: 600;
         }
 
         .cert-grid {
@@ -438,21 +485,22 @@
         }
 
         .cert-item {
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            border-left: 4px solid #2563eb;
-            font-size: 0.95rem;
-            color: #4b5563;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #8b7355;
+            font-size: 0.9rem;
+            color: #34495e;
             transition: transform 0.2s;
+            font-weight: 400;
         }
 
         .cert-item:hover {
-            transform: translateX(5px);
+            transform: translateX(3px);
         }
 
         .tools {
-            background: #f9fafb;
+            background: #ffffff;
         }
 
         .tools-grid {
@@ -462,27 +510,27 @@
         }
 
         .tool-card {
-            background: white;
-            padding: 1.2rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #ffffff;
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             transition: all 0.3s;
-            border-left: 4px solid #2563eb;
+            border-left: 3px solid #8b7355;
         }
 
         .tool-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(37,99,235,0.2);
+            transform: translateX(3px);
+            box-shadow: 0 4px 10px rgba(139, 115, 85, 0.15);
         }
 
         .tool-name {
-            font-weight: 600;
-            color: #1f2937;
-            font-size: 1rem;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 0.95rem;
         }
 
         .contact {
-            background: white;
+            background: #fffbfb;
         }
 
         .contact-grid {
@@ -503,26 +551,28 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1.5rem;
-            background: #f9fafb;
-            border-radius: 12px;
+            padding: 1.2rem;
+            background: #ffffff;
+            border-radius: 6px;
             transition: transform 0.3s;
+            border: 1px solid #e9ecef;
         }
 
         .contact-item:hover {
-            transform: translateX(5px);
+            transform: translateX(3px);
+            border-color: #8b7355;
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: #2563eb;
+            width: 45px;
+            height: 45px;
+            background: #8b7355;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .form-group {
@@ -533,23 +583,24 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: #374151;
+            color: #2c3e50;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-family: inherit;
+            padding: 0.9rem;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-family: 'Work Sans', sans-serif;
             transition: border-color 0.3s;
+            font-size: 0.95rem;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #2563eb;
+            border-color: #8b7355;
         }
 
         .form-group textarea {
@@ -559,19 +610,19 @@
 
         .submit-btn {
             width: 100%;
-            padding: 1rem;
-            background: #2563eb;
+            padding: 0.9rem;
+            background: #8b7355;
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
             cursor: pointer;
             transition: background 0.3s;
         }
 
         .submit-btn:hover {
-            background: #1d4ed8;
+            background: #6f5a42;
         }
 
         @media (max-width: 1024px) {
@@ -583,38 +634,42 @@
             .tools-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
             section {
-                padding: 4rem 4% 3rem;
+                padding: 4rem 5% 3rem;
             }
 
             nav {
                 flex-direction: column;
                 gap: 1rem;
-                padding: 1rem 4%;
+                padding: 1rem 5%;
             }
 
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 1rem;
-                font-size: 0.85rem;
+                gap: 1.2rem;
+                font-size: 0.9rem;
             }
 
             .hero {
-                padding: 6rem 4% 4rem;
-                min-height: 80vh;
+                padding: 6rem 5% 4rem;
+                min-height: 85vh;
             }
 
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
                 line-height: 1.2;
             }
 
             .hero .subtitle {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .hero .tagline {
@@ -622,12 +677,12 @@
             }
 
             h2 {
-                font-size: 1.8rem;
-                margin-bottom: 1.5rem;
+                font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
             .section-subtitle {
-                font-size: 1rem;
+                font-size: 0.95rem;
                 margin-bottom: 2rem;
             }
 
@@ -645,7 +700,7 @@
             }
 
             .stat-icon {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .stat-number {
@@ -657,7 +712,7 @@
             }
 
             .timeline-item h3 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .timeline-header {
@@ -679,11 +734,12 @@
             }
 
             .metric-value {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .project-header {
@@ -691,7 +747,7 @@
             }
 
             .project-card h3 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .project-content {
@@ -700,7 +756,7 @@
 
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 2.5rem;
             }
 
             .skills-grid,
@@ -716,7 +772,7 @@
 
             .skill-name,
             .tool-name {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .cert-grid {
@@ -725,17 +781,20 @@
 
             .cta-button {
                 padding: 1rem 2rem;
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
             }
         }
 
         @media (max-width: 480px) {
             section {
-                padding: 3rem 3% 2rem;
+                padding: 3rem 4% 2rem;
             }
 
             nav {
-                padding: 1rem 3%;
+                padding: 1rem 4%;
             }
 
             .logo {
@@ -744,19 +803,19 @@
 
             .nav-links {
                 gap: 0.8rem;
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
 
             .hero {
-                padding: 5rem 3% 3rem;
+                padding: 5rem 4% 3rem;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .hero .subtitle {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .hero .tagline {
@@ -764,7 +823,7 @@
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .section-subtitle {
@@ -780,25 +839,27 @@
             }
 
             .timeline-item h3 {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .achievement-label {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                padding: 0.4rem 0.6rem;
             }
 
             .achievements-list li,
             .project-achievements li {
-                font-size: 0.9rem;
-                line-height: 1.6;
+                font-size: 0.85rem;
+                line-height: 1.5;
+                padding-left: 1.5rem;
             }
 
             .project-icon {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .project-card h3 {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .project-description {
@@ -807,32 +868,33 @@
 
             .skill-name,
             .tool-name {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .contact-icon {
-                width: 45px;
-                height: 45px;
+                width: 40px;
+                height: 40px;
                 font-size: 1.1rem;
+            }
+
+            .contact-item {
+                padding: 1rem;
             }
 
             .form-group input,
             .form-group textarea {
-                padding: 0.9rem;
-                font-size: 0.95rem;
+                padding: 0.8rem;
+                font-size: 0.9rem;
             }
 
             .submit-btn {
-                padding: 0.9rem;
-                font-size: 0.95rem;
+                padding: 0.8rem;
+                font-size: 0.9rem;
             }
 
             .cta-button {
-                display: block;
                 width: 100%;
-                margin: 0.5rem 0;
                 padding: 0.9rem;
-                text-align: center;
             }
         }
     </style>
@@ -854,8 +916,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Emmanuel Ekam</h1>
-            <p class="subtitle">AI Quality Specialist & Data Annotation Practitioner</p>
-            <p class="tagline">Electronic & Computer Engineer | 25K+ Annotations | 98-99% Accuracy</p>
+            <p class="subtitle">AI Quality Specialist | Data Annotation | Technical Operations</p>
+            <p class="tagline">Electronic & Computer Engineering | 15K+ Annotations | Cross-Functional Expertise</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
             <a href="#experience" class="cta-button">View Experience</a>
         </div>
@@ -864,10 +926,10 @@
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
-            <p class="section-subtitle">Focused on Quality & Consistency in AI Systems</p>
+            <p class="section-subtitle">Quality-Driven Professional with Technical & Analytical Expertise</p>
             <div class="about-text">
-                <p>AI Quality Specialist with comprehensive expertise in high-precision data annotation, LLM evaluation, and model quality assurance. Specializing in NLP, generative AI, and large language model training with consistently maintained ~99% accuracy across diverse, complex annotation tasks.</p>
-                <p>With a strong foundation in Electronic and Computer Engineering from the University of Nigeria, I combine technical expertise with analytical rigor to maintain quality, reliability, and cross-functional effectiveness in production AI environments. Work has contributed to production-grade models in deployed systems.</p>
+                <p>Versatile professional combining AI quality assurance expertise with hands-on technical operations experience. Background in Electronic and Computer Engineering provides strong foundation for both analytical AI work and practical technical project management.</p>
+                <p>Skilled in quality control methodologies, process optimization, and data-driven decision making across AI annotation, technical operations, and project coordination. Proven ability to maintain high accuracy standards, manage cross-functional workflows, and deliver measurable improvements in both digital and physical project environments.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
@@ -877,7 +939,7 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">🎯</div>
-                    <span class="stat-number">~99%</span>
+                    <span class="stat-number">~97%</span>
                     <span class="stat-label">Accuracy Under Multi-Pass QA</span>
                 </div>
                 <div class="stat-card">
@@ -891,14 +953,14 @@
                     <span class="stat-label">Agreement Increase After Guideline Updates</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">✅</div>
-                    <span class="stat-number">~99%</span>
-                    <span class="stat-label">On-Time SLA Compliance</span>
+                    <div class="stat-icon">⚙️</div>
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Technical Operations</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <span class="stat-number">9,000+</span>
-                    <span class="stat-label">Complex NLP Tasks Processed</span>
+                    <div class="stat-icon">📊</div>
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Cross-Functional Projects</span>
                 </div>
             </div>
         </div>
@@ -921,13 +983,13 @@
                     <div class="achievements-section">
                         <p class="achievement-label">🎯 Key Responsibilities & Methods:</p>
                         <ul class="achievements-list">
-                            <li><strong>Lead Quality Auditor:</strong> Conducted secondary review and comprehensive audits of LLM training and evaluation datasets, processing 6,000+ data points monthly while verifying alignment with safety, reasoning, and instruction-following standards</li>
+                            <li><strong>Lead Quality Auditor:</strong> Conducted secondary review and comprehensive audits of LLM training and evaluation datasets, processing 3,000+ data points monthly while verifying alignment with safety, reasoning, and instruction-following standards</li>
                             <li><strong>Error Analysis:</strong> Performed root-cause analysis on annotation and model failure patterns, implementing corrective actions that increased first-pass quality and reduced rework cycles by ~15%</li>
                             <li><strong>Cross-Functional Collaboration:</strong> Coordinated with ML engineers and data scientists to refine task design, scoring rubrics, and edge-case handling protocols, contributing to models maintaining >95% precision benchmarks</li>
                             <li><strong>Quality Framework Development:</strong> Identified and documented 30+ systematic annotation errors; guideline revisions improved team-wide consistency by 22%</li>
                             <li><strong>Process Implementation:</strong> Developed and implemented quality assurance framework; QA audits and rubric updates contributed to ~40% reduction in critical safety issues</li>
                             <li><strong>Team Performance Enhancement:</strong> Provided structured quality reports and actionable feedback that increased inter-annotator agreement from 87% to 94%</li>
-                            <li><strong>SLA Compliance:</strong> Maintained strict compliance with evolving project guidelines and evaluation protocols under tight deadlines, consistently meeting SLA targets (~99% on-time)</li>
+                            <li><strong>SLA Compliance:</strong> Maintained strict compliance with evolving project guidelines and evaluation protocols under tight deadlines, consistently meeting SLA targets (~93% on-time)</li>
                         </ul>
                     </div>
 
@@ -963,10 +1025,10 @@
                     <div class="achievements-section">
                         <p class="achievement-label">🏆 Key Methods & Recognition:</p>
                         <ul class="achievements-list">
-                            <li><strong>High-Consistency Performance:</strong> Maintained ~99% annotation accuracy across 9,000+ complex NLP, reasoning, and instruction-following tasks for large-scale LLM training initiatives</li>
+                            <li><strong>High-Consistency Performance:</strong> Maintained ~95% annotation accuracy across 9,000+ complex NLP, reasoning, and instruction-following tasks for large-scale LLM training initiatives</li>
                             <li><strong>Top-Scoring Reviewer:</strong> Consistently ranked among top-scoring reviewers in distributed annotation teams, selected for advanced review responsibilities and safety-sensitive projects</li>
                             <li><strong>Production Impact:</strong> Reviewed and processed datasets used to train production-grade models in deployed systems</li>
-                            <li><strong>Safety Evaluation:</strong> Applied analytical judgment in handling ambiguous, adversarial, and edge-case prompts with ~97% accuracy on safety scenarios under rubric scoring</li>
+                            <li><strong>Safety Evaluation:</strong> Applied analytical judgment in handling ambiguous, adversarial, and edge-case prompts with ~94% accuracy on safety scenarios under rubric scoring</li>
                             <li><strong>Zero-Critical-Error Performance:</strong> Recognized for achieving zero critical errors over 6 consecutive months under multi-pass QA review</li>
                             <li><strong>Team Mentoring:</strong> Mentored new team members on annotation best practices and quality standards, reducing ramp-up time and increasing team efficiency</li>
                             <li><strong>Guideline Development:</strong> Contributed to development of 6 specialized annotation guidelines for emerging AI safety scenarios, now used as standard protocols across teams</li>
@@ -1050,12 +1112,12 @@
                         <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Dashcam footage" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Large-scale computer vision annotation for autonomous vehicle training, focusing on object detection, lane identification, and traffic scenario classification from real-world dashcam footage.</p>
                         <ul class="project-achievements">
-                            <li>Reviewed and annotated 2,500+ hours of dashcam video footage across diverse conditions</li>
+                            <li>Reviewed and annotated 1,850+ hours of dashcam video footage across diverse conditions</li>
                             <li>Labeled 40+ object classes including vehicles, pedestrians, cyclists, and traffic signs</li>
                             <li>Maintained ~98.7% accuracy in bounding box placement and object classification under QA review</li>
                             <li>Processed footage in varying weather conditions (rain, fog, night driving)</li>
                             <li>Contributed to autonomous driving perception datasets used in production environments</li>
-                            <li>Validated consistent quality standards across 35,000+ annotated frames</li>
+                            <li>Validated consistent quality standards across 25,000+ annotated frames</li>
                         </ul>
                     </div>
                 </div>
@@ -1070,7 +1132,7 @@
                         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Infrastructure inspection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Specialized computer vision work for municipal infrastructure maintenance, annotating underground inspection imagery for defect detection, structural assessment, and predictive maintenance applications.</p>
                         <ul class="project-achievements">
-                            <li>Processed 5,500+ underground inspection images with high precision</li>
+                            <li>Processed 1,400+ underground inspection images with high precision</li>
                             <li>Classified 18+ defect types (cracks, corrosion, blockages, structural damage)</li>
                             <li>Performed semantic segmentation for pipe condition assessment</li>
                             <li>Maintained ~97.9% inter-annotator agreement on defect classification</li>
@@ -1090,7 +1152,7 @@
                         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="LLM Training" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Comprehensive work on large language model training datasets, specializing in instruction-following, complex reasoning tasks, RLHF feedback, and safety alignment for production AI systems.</p>
                         <ul class="project-achievements">
-                            <li>Reviewed and processed 12,000+ annotations for LLM training initiatives</li>
+                            <li>Reviewed and processed 9,000+ annotations for LLM training initiatives</li>
                             <li>Ranked and evaluated responses for RLHF optimization under rubric-based scoring</li>
                             <li>Conducted safety and harmfulness evaluation across diverse scenarios</li>
                             <li>Assessed complex reasoning and multi-turn dialogue capabilities</li>
@@ -1110,7 +1172,7 @@
                         <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Generative AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Comprehensive evaluation and quality scoring for generative AI outputs including text generation, content safety verification, and prompt-response alignment for production systems.</p>
                         <ul class="project-achievements">
-                            <li>Evaluated 6,000+ AI-generated responses across multiple models</li>
+                            <li>Evaluated 3,200+ AI-generated responses across multiple models</li>
                             <li>Scored output quality across 12 comprehensive dimensions using rubrics</li>
                             <li>Applied prompt engineering and refinement methods for optimal results</li>
                             <li>Performed content safety and alignment verification</li>
@@ -1130,11 +1192,11 @@
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Document AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Advanced text annotation for information extraction, named entity recognition, sentiment analysis, and document classification for enterprise AI applications.</p>
                         <ul class="project-achievements">
-                            <li>Labeled 8,500+ complex text documents with high precision</li>
+                            <li>Labeled 2,500+ complex text documents with high precision</li>
                             <li>Performed named entity recognition (NER) for critical entities</li>
                             <li>Applied sentiment and intent classification methods</li>
                             <li>Processed multi-language text with cultural sensitivity</li>
-                            <li>Maintained ~99.1% field extraction accuracy under review</li>
+                            <li>Maintained ~95.1% field extraction accuracy under review</li>
                             <li>Validated annotation standards for document AI</li>
                         </ul>
                     </div>
@@ -1150,11 +1212,11 @@
                         <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&q=80" alt="Reasoning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Complex reasoning task annotation for AI systems, including mathematical reasoning, logical deduction, code generation evaluation, and multi-step problem solving.</p>
                         <ul class="project-achievements">
-                            <li>Processed 3,500+ complex reasoning tasks</li>
+                            <li>Processed 1,800+ complex reasoning tasks</li>
                             <li>Evaluated code generation quality and correctness</li>
                             <li>Assessed mathematical and logical reasoning capabilities</li>
                             <li>Validated multi-step instruction following</li>
-                            <li>Maintained ~98.3% annotation consistency rate under audit</li>
+                            <li>Maintained ~93.3% annotation consistency rate under audit</li>
                             <li>Applied evaluation criteria for reasoning tasks</li>
                         </ul>
                     </div>
@@ -1170,12 +1232,32 @@
                         <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&q=80" alt="AI Safety" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Specialized work on AI safety datasets including harmful content detection, bias evaluation, fairness assessment, and ethical AI alignment for responsible deployment.</p>
                         <ul class="project-achievements">
-                            <li>Reviewed 4,500+ safety scenarios with structured analysis</li>
+                            <li>Reviewed 1,500+ safety scenarios with structured analysis</li>
                             <li>Classified harmful content with severity ratings under rubrics</li>
                             <li>Applied bias and fairness evaluation across demographics</li>
                             <li>Tested edge cases and adversarial prompts</li>
-                            <li>QA audits and rubric updates contributed to ~40% reduction in safety issues</li>
+                            <li>QA audits and rubric updates contributed to ~38% reduction in safety issues</li>
                             <li>Validated safety evaluation frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <h3>Electrical Systems Quality Assurance</h3>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Role: Project Supervisor & QA Coordinator</p>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Electrical Systems" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Technical operations and quality assurance for electrical installation projects, coordinating multi-site teams while maintaining safety compliance and project delivery standards.</p>
+                        <ul class="project-achievements">
+                            <li>Coordinated 10+ electrical installation projects across commercial sites</li>
+                            <li>Maintained ~93% on-time project completion through systematic planning</li>
+                            <li>Implemented inspection protocols reducing safety incidents by ~30%</li>
+                            <li>Managed technical documentation and compliance verification</li>
+                            <li>Applied systems thinking to optimize resource allocation and scheduling</li>
+                            <li>Conducted quality audits ensuring adherence to electrical codes and standards</li>
                         </ul>
                     </div>
                 </div>
@@ -1190,12 +1272,32 @@
                         <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80" alt="Conversational AI" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
                         <p class="project-description">Multi-turn dialogue annotation for chatbots and virtual assistants, including context understanding, response quality evaluation, and personality consistency assessment.</p>
                         <ul class="project-achievements">
-                            <li>Reviewed 3,000+ complex dialogue sessions</li>
+                            <li>Reviewed 1,100+ complex dialogue sessions</li>
                             <li>Evaluated context coherence and continuity</li>
                             <li>Scored response appropriateness and quality using rubrics</li>
                             <li>Assessed personality and tone consistency</li>
                             <li>Validated datasets for customer service AI deployment</li>
                             <li>Applied conversational flow evaluation methods</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📋</div>
+                        <h3>Operations Process Optimization</h3>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Role: Front Office Manager</p>
+                    </div>
+                    <div class="project-content">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Operations" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <p class="project-description">Customer operations and administrative workflow optimization for e-commerce environment, focusing on service delivery, record management, and cross-department coordination.</p>
+                        <ul class="project-achievements">
+                            <li>Managed customer operations for 200+ daily interactions</li>
+                            <li>Reduced service turnaround time by ~25% through workflow optimization</li>
+                            <li>Implemented digital record management improving data accuracy</li>
+                            <li>Coordinated scheduling and resource allocation across departments</li>
+                            <li>Developed performance tracking protocols for service quality</li>
+                            <li>Enhanced cross-functional communication reducing resolution time</li>
                         </ul>
                     </div>
                 </div>
@@ -1206,8 +1308,47 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2>Core Skills & Expertise</h2>
-            <p class="section-subtitle">Technical & Quality Assurance Capabilities</p>
+            <p class="section-subtitle">Cross-Functional Technical & Quality Assurance Capabilities</p>
             <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-name">📝 Data Quality Assurance</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🎯 Process Optimization</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📊 Performance Metrics & KPIs</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⚙️ Technical Project Coordination</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📋 Compliance & Standards Verification</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔍 Root Cause Analysis</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">✅ Quality Control Methodologies</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📈 Data-Driven Decision Making</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🤝 Cross-Functional Collaboration</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📅 Resource Planning & Scheduling</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🔄 Workflow Documentation</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">⏱️ SLA Management & Delivery</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🤖 LLM Evaluation & Testing</div>
+                </div>
                 <div class="skill-card">
                     <div class="skill-name">📝 Named Entity Recognition (NER)</div>
                 </div>
@@ -1218,91 +1359,52 @@
                     <div class="skill-name">🏷️ Text Classification</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">🎯 Intent Recognition</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🤖 LLM Evaluation & Testing</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">⭐ RLHF (Reinforcement Learning from Human Feedback)</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">📊 Response Ranking & Comparison</div>
+                    <div class="skill-name">⭐ RLHF (Human Feedback)</div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-name">🔒 AI Safety & Alignment</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">💡 Prompt Engineering</div>
+                    <div class="skill-name">💡 Annotation Guidelines Development</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">🎨 Model Fine-tuning Support</div>
+                    <div class="skill-name">🐛 Error Pattern Detection</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">🔍 Root Cause Analysis</div>
+                    <div class="skill-name">⚡ Electrical Systems Knowledge</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">✅ Dataset Validation</div>
+                    <div class="skill-name">🔧 Technical Operations Management</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">🐛 Error Analysis & Pattern Detection</div>
+                    <div class="skill-name">🛡️ Safety Protocol Implementation</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">⚙️ QA Framework Development</div>
+                    <div class="skill-name">💻 Technical Documentation</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">📋 Audit Reporting</div>
+                    <div class="skill-name">🎓 Team Training & Mentoring</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">📈 Statistical Analysis</div>
+                    <div class="skill-name">🐍 Python Programming (Basic)</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">🤝 Inter-annotator Agreement</div>
+                    <div class="skill-name">📊 Microsoft Excel & Data Analysis</div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-name">📖 Guideline Development</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🧠 Complex Reasoning Tasks</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">💻 Code Quality Evaluation</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">📄 Document AI & Information Extraction</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">💬 Conversational AI Evaluation</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🛡️ Content Moderation</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">⚖️ Bias Detection & Fairness</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🐍 Python Programming</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🔄 Data Pipeline Management</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">📅 Project Management</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">👥 Cross-functional Collaboration</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">📚 Technical Documentation</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">🎓 Team Mentoring & Training</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name">⏱️ SLA Management</div>
+                    <div class="skill-name">👥 Stakeholder Communication</div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-name">🔁 Agile Methodology</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">💼 Customer Service Excellence</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">📄 Administrative Operations</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">🎯 Problem Solving & Critical Thinking</div>
                 </div>
             </div>
 
@@ -1392,14 +1494,14 @@
                         <div class="contact-icon">💼</div>
                         <div>
                             <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Open To</h4>
-                            <p style="color: #4b5563; margin: 0;">AI/ML Opportunities, Data Annotation Projects, Quality Assurance Roles, Consulting</p>
+                            <p style="color: #4b5563; margin: 0;">AI/ML Opportunities, Data Annotation Projects, Quality Assurance Roles, Technical Project Management, Technical Customer Success, Product Operations (AI Platforms & Tools)</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🎯</div>
                         <div>
                             <h4 style="margin-bottom: 0.3rem; color: #1f2937;">Specializations</h4>
-                            <p style="color: #4b5563; margin: 0;">NLP, LLM Evaluation, RLHF, AI Safety, Generative AI</p>
+                            <p style="color: #4b5563; margin: 0;">NLP, LLM Evaluation, RLHF, AI Safety, Generative AI, Model Validation & Data Quality Analysis, Technical Project Supervision (Engineering & AI Projects)</p>
                         </div>
                     </div>
                 </div>
